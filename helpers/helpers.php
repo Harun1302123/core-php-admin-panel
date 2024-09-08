@@ -2,6 +2,18 @@
 /**
  * Function to generate random string.
  */
+function base_url($path = '') {
+    // Determine the base URL
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+    $host = $_SERVER['HTTP_HOST'];
+
+    // Base URL up to the root of the application
+    $baseUrl = $protocol . $host . '/';
+
+    // Combine the base URL with the provided path
+    return $baseUrl . ltrim($path, '/');
+}
+
 function randomString($n) {
 
 	$generated_string = "";

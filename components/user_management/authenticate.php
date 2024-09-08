@@ -1,6 +1,6 @@
 <?php
-require_once './config/config.php';
 session_start();
+require_once '../../config/config.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$username = filter_input(INPUT_POST, 'username');
 	$passwd = filter_input(INPUT_POST, 'passwd');
@@ -50,18 +50,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$db->update("admin_accounts", $update_remember);
 			}
 			//Authentication successfull redirect user
-			header('Location:index.php');
+			header('Location: ../../admin/dashboard.php');
 
 		} else {
 		
 			$_SESSION['login_failure'] = "Invalid user name or password";
-			header('Location:login.php');
+			header('Location:../../index.php');
 		}
 
 		exit;
 	} else {
 		$_SESSION['login_failure'] = "Invalid user name or password";
-		header('Location:login.php');
+		header('Location:../../index.php');
 		exit;
 	}
 
