@@ -1,7 +1,8 @@
 <?php
-// bank/dashboard.php
+// institutional_investor/dashboard.php
 include_once dirname(__DIR__).'/includes/header.php';
 ?>
+
 
 <style>
     body {
@@ -32,7 +33,7 @@ include_once dirname(__DIR__).'/includes/header.php';
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Welcome [Bank Name]</a>
+            <a class="navbar-brand" href="#">Welcome [Institution Name]</a>
         </div>
     </div>
 </nav>
@@ -44,7 +45,7 @@ include_once dirname(__DIR__).'/includes/header.php';
         <div class="col-md-3 menubar">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="#fundingRequests" data-toggle="tab">Review Funding Requests</a></li>
-                <li><a href="#manageOffers" data-toggle="tab">Manage Offers</a></li>
+                <li><a href="#manageInvestments" data-toggle="tab">Manage Investments</a></li>
                 <li><a href="#notifications" data-toggle="tab">Notifications</a></li>
                 <li><a href="#accountSettings" data-toggle="tab">Account Settings</a></li>
             </ul>
@@ -54,17 +55,17 @@ include_once dirname(__DIR__).'/includes/header.php';
         <div class="col-md-9 content">
             <div class="tab-content">
                 <!-- Active Investment Opportunities -->
-                <div class="tab-pane fade in active" id="manageOffers">
-                    <h2 class="section-header">Active Offers List</h2>
+                <div class="tab-pane fade in active" id="manageInvestments">
+                    <h2 class="section-header">Active Investment Opportunities</h2>
                     <!-- Replace with dynamic content -->
-                    <p>Based on bids tables.</p>
+                    <p>List of active investment opportunities based on funding_requests and bids tables.</p>
                 </div>
 
                 <!-- Funding Requests of Interest -->
                 <div class="tab-pane fade" id="fundingRequests">
                     <h2 class="section-header">Funding Requests of Interest</h2>
                     <!-- Replace with dynamic content -->
-                    <p>Linked on funding_requests tables.</p>
+                    <p>List of funding requests that are of interest to the institution.</p>
                 </div>
 
                 <!-- Notifications -->
@@ -78,7 +79,7 @@ include_once dirname(__DIR__).'/includes/header.php';
                 <div class="tab-pane fade" id="summaryActivity">
                     <h2 class="section-header">Summary of Investment Activity</h2>
                     <!-- Replace with dynamic content -->
-                    <p>Graphs or charts showing investment trends, portfolio performance, etc.</p>
+                    <p>Charts or graphs showing investment distribution, returns, etc.</p>
                 </div>
 
                 <!-- Documents -->
@@ -112,7 +113,7 @@ include_once dirname(__DIR__).'/includes/header.php';
                 <div class="tab-pane fade" id="analytics">
                     <h2 class="section-header">Analytics</h2>
                     <!-- Replace with dynamic content -->
-                    <p>Graphs or charts showing investment trends, portfolio performance, etc.</p>
+                    <p>Charts or graphs showing investment distribution, returns, etc.</p>
                 </div>
             </div>
         </div>
@@ -121,4 +122,3 @@ include_once dirname(__DIR__).'/includes/header.php';
 
 
 <?php include_once dirname(__DIR__).('/includes/footer.php'); ?>
-
